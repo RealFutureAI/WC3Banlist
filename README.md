@@ -34,3 +34,7 @@ Do not try to use this without any programming knowledge as the setup is not ver
 5. Run the script in your favorite environment
 6. F3 to check bans, F6 to end script
 
+Support:
+If you want to support me, you can do it here:
+buymeacoffee.com/RealFutureAi
+paypal.me/FutureAI
