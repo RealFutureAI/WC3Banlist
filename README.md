@@ -27,12 +27,60 @@ This is for more precise checking the banned players as OCR never guarantees cor
 ## Installation:
 Do not try to use this without any programming knowledge as the setup is not very easy!
 
+Short Version:
 1. Download Python and install it
 2. Download Tesseract OCR and install it
 3. Download Wc3Banlist.py
 4. Install all dependencies with pip
 5. Run the script in your favorite environment
 6. F3 to check bans, F6 to end script
+
+Long Version:
+✅ Prerequisites
+Make sure the following are installed on your system:
+
+[Python 3.6](https://www.python.org/downloads/)
+[Tesseract OCR](https://github.com/tesseract-ocr/tesseract)
+
+(Install it and note the path in the python script to the tesseract.exe if you're on Windows)
+
+## Required Python Libraries
+Install the required Python packages via pip:
+
+pip install pytesseract opencv-python pyautogui keyboard openpyxl
+These standard libraries are also used (no need to install):
+time, os, difflib
+
+Make sure the file grab_screen.py is present in the same folder as your Wc3Banlist.py
+
+Create a file named banlist.xlsx with the following structure and set the path to it in the Wc3Banlist.py (example path is already given):
+
+name	reason
+PlayerOne	Leaver
+PlayerTwo	Toxicity
+PlayerThree	Cheating
+
+Column headers must be lowercase: name, reason.
+
+## Running the Script
+Launch Warcraft III and host a custom game lobby.
+
+Run the script:
+
+python Wc3Banlist.py
+
+Use the hotkeys:
+
+Hotkey	Action
+F3	Scan and auto-ban players
+F6	Terminate the script
+
+## How It Works
+The script uses OCR (via Tesseract) to read player names from the lobby.
+
+It compares those names to your Excel banlist.
+
+Matching players are automatically banned using simulated keystrokes.
 
 ## Support
 
