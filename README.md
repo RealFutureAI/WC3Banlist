@@ -1,4 +1,4 @@
-# WC3Banlist - UPLOAD SOON
+# WC3Banlist
 A working Banlist for Warcraft 3
 
 This python script uses pytesseract OCR and Microsoft Excel to read all the playernames in your lobby and compares it with your Excel Banlist file.
