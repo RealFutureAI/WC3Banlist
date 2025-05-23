@@ -51,19 +51,20 @@ Make sure the following are installed on your system:
 ## Required Python Libraries
 Install the required Python packages via pip (open your command line and copy paste the following command):
 
-pip install pytesseract opencv-python pyautogui keyboard openpyxl
+<pre>pip install pytesseract opencv-python pyautogui keyboard openpyxl</pre>
 
 These standard libraries are also used (no need to install):
 time, os, difflib
 
-Make sure the file grab_screen.py is present in the same folder as your Wc3Banlist.py
+**Make sure the file grab_screen.py is present in the same folder as your Wc3Banlist.py**
 
 Create a file named banlist.xlsx with the following structure and set the path to it in the Wc3Banlist.py (example path is already given):
 
-name	reason
-PlayerOne	Leaver
-PlayerTwo	Toxicity
-PlayerThree	Cheating
+| name |	reason |
+|------|------|
+|PlayerOne |	Leaver|
+|PlayerTwo |	Toxicity|
+|PlayerThree |	Cheating|
 
 Column headers must be lowercase: name, reason.
 
