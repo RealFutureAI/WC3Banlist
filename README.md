@@ -32,22 +32,25 @@ Short Version:
 2. Download Tesseract OCR and install it
 3. Download Wc3Banlist.py
 4. Install all dependencies with pip
-5. Run the script in your favorite environment
-6. F3 to check bans, F6 to end script
+5. Configure the Coordinates in the script
+6. Run the script in your favorite environment
+7. F3 to check bans, F6 to end script
 
 Long Version:
-✅ Prerequisites
+## Prerequisites
 Make sure the following are installed on your system:
 
 [Python 3.6](https://www.python.org/downloads/)
+
 [Tesseract OCR](https://github.com/tesseract-ocr/tesseract)
 
 (Install it and note the path in the python script to the tesseract.exe if you're on Windows)
 
 ## Required Python Libraries
-Install the required Python packages via pip:
+Install the required Python packages via pip (open your command line and copy paste the following command):
 
 pip install pytesseract opencv-python pyautogui keyboard openpyxl
+
 These standard libraries are also used (no need to install):
 time, os, difflib
 
@@ -61,6 +64,49 @@ PlayerTwo	Toxicity
 PlayerThree	Cheating
 
 Column headers must be lowercase: name, reason.
+
+## Customizing Screen Coordinates for Your Resolution
+The script uses fixed screen regions to extract player names from the Warcraft III lobby using OCR. These regions are defined as tuples of screen coordinates:
+
+(x1, y1, x2, y2)
+
+Example from the code:
+
+for coords in [(400, 520, 850, 900), (1700, 520, 2150, 900)]
+
+These represent two rectangular areas to scan for the left and right halves of the player list in the lobby.
+
+## How to Adjust Coordinates for Your Resolution
+If you are not using a 4K monitor or your UI scale differs, you'll likely need to update the coordinates.
+
+## Steps:
+Take a Screenshot
+Open a game lobby in Warcraft III and take a full-screen screenshot with the player list visible.
+
+Open the Screenshot in an Image Editor
+Use any tool (e.g., Paint, GIMP, Photoshop) that shows pixel coordinates.
+
+Measure Rectangles Around Player Names
+For each column of names (left/right), find the top-left (x1, y1) and bottom-right (x2, y2) corners that encompass all the names.
+
+## Update the Script
+Replace the coordinates in the extract_players_with_positions() function:
+
+for coords in [(your_x1, your_y1, your_x2, your_y2), ...]
+
+## Test and Fine-Tune
+Run the script, press F3, and see if names are being recognized. Adjust as needed.
+
+## Example for 2560×1440 (QHD)
+If you're using 2560×1440, your coordinates might look like:
+
+for coords in [(500, 700, 1000, 1150), (1900, 700, 2400, 1150)]
+These are just example values – you should always verify using a screenshot from your own system.
+
+## Tips
+Leave extra padding around names to help OCR recognition.
+
+Avoid scanning unnecessary UI elements like borders or icons.
 
 ## Running the Script
 Launch Warcraft III and host a custom game lobby.
