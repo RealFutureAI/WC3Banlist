@@ -81,7 +81,6 @@ These represent two rectangular areas to scan for the left and right halves of t
 ## How to Adjust Coordinates for Your Resolution
 If you are not using a 4K monitor or your UI scale differs, you'll likely need to update the coordinates.
 
-## Steps:
 Take a Screenshot
 Open a game lobby in Warcraft III and take a full-screen screenshot with the player list visible.
 
@@ -91,12 +90,10 @@ Use any tool (e.g., Paint, GIMP, Photoshop) that shows pixel coordinates.
 Measure Rectangles Around Player Names
 For each column of names (left/right), find the top-left (x1, y1) and bottom-right (x2, y2) corners that encompass all the names.
 
-## Update the Script
 Replace the coordinates in the extract_players_with_positions() function:
 
 for coords in [(your_x1, your_y1, your_x2, your_y2), ...]
 
-## Test and Fine-Tune
 Run the script, press F3, and see if names are being recognized. Adjust as needed.
 
 ## Example for 2560×1440 (QHD)
