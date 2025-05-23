@@ -71,7 +71,7 @@ The script uses fixed screen regions to extract player names from the Warcraft I
 
 (x1, y1, x2, y2)
 
-Example from the code:
+Example from the code (for 4K resolution):
 
 <pre>for coords in [(400, 520, 850, 900), (1700, 520, 2150, 900)]</pre>
 
