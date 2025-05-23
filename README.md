@@ -77,7 +77,10 @@ Example from the code:
 
 <pre>for coords in [(400, 520, 850, 900), (1700, 520, 2150, 900)]</pre>
 
+See this image on how to find your coordinates<img width="1920" alt="Coordinates" src="https://github.com/user-attachments/assets/3de28dfc-0743-4dd6-8ac9-886fb5a97609" />
+
 These represent two rectangular areas to scan for the left and right halves of the player list in the lobby.
+
 
 ## How to Adjust Coordinates for Your Resolution
 If you are not using a 4K monitor or your UI scale differs, you'll likely need to update the coordinates.
