@@ -2,7 +2,8 @@
 A working Banlist for Warcraft 3
 
 This python script uses pytesseract OCR and Microsoft Excel to read all the playernames in your lobby and compares it with your Excel Banlist file.
-If there are matching entries, the script will automatically ban the players from your lobby. The script will also output an optional reason, why the players have been banned before kicking them from the lobby. Example:
+If there are matching entries, the script will automatically ban the players from your lobby. The script will also output an optional reason, why the players have been banned before kicking them from the lobby. 
+Example:
 Players banned:
 <name> - Reason: leaver
 <name2> - Reason: flamer
@@ -11,6 +12,7 @@ This output will be written in the lobby and in the terminal.
 
 ## Hotkeys:
 F3: Check for banned players in the lobby and ban them
+
 F6: End the script
 
 ## More Info:
