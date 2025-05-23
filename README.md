@@ -74,7 +74,8 @@ The script uses fixed screen regions to extract player names from the Warcraft I
 
 Example from the code:
 
-for coords in [(400, 520, 850, 900), (1700, 520, 2150, 900)]
+<pre> ```python // for coords in [(400, 520, 850, 900), (1700, 520, 2150, 900)] ``` </pre>
+
 
 These represent two rectangular areas to scan for the left and right halves of the player list in the lobby.
 
