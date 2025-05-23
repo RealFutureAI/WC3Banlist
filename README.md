@@ -66,8 +66,6 @@ Create a file named banlist.xlsx with the following structure and set the path t
 |PlayerTwo |	Toxicity|
 |PlayerThree |	Cheating|
 
-Column headers must be lowercase: name, reason.
-
 ## Customizing Screen Coordinates for Your Resolution
 The script uses fixed screen regions to extract player names from the Warcraft III lobby using OCR. These regions are defined as tuples of screen coordinates:
 
