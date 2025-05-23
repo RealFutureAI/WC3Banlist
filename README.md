@@ -74,8 +74,7 @@ The script uses fixed screen regions to extract player names from the Warcraft I
 
 Example from the code:
 
-<pre> ```python // for coords in [(400, 520, 850, 900), (1700, 520, 2150, 900)] ``` </pre>
-
+<pre>for coords in [(400, 520, 850, 900), (1700, 520, 2150, 900)]</pre>
 
 These represent two rectangular areas to scan for the left and right halves of the player list in the lobby.
 
@@ -93,15 +92,9 @@ For each column of names (left/right), find the top-left (x1, y1) and bottom-rig
 
 Replace the coordinates in the extract_players_with_positions() function:
 
-for coords in [(your_x1, your_y1, your_x2, your_y2), ...]
+<pre>for coords in [(your_x1, your_y1, your_x2, your_y2), ...]</pre>
 
 Run the script, press F3, and see if names are being recognized. Adjust as needed.
-
-## Example for 2560×1440 (QHD)
-If you're using 2560×1440, your coordinates might look like:
-
-for coords in [(500, 700, 1000, 1150), (1900, 700, 2400, 1150)]
-These are just example values – you should always verify using a screenshot from your own system.
 
 ## Tips
 Leave extra padding around names to help OCR recognition.
@@ -113,13 +106,14 @@ Launch Warcraft III and host a custom game lobby.
 
 Run the script:
 
-python Wc3Banlist.py
+<pre>python Wc3Banlist.py</pre>
 
 Use the hotkeys:
 
-Hotkey	Action
-F3	Scan and auto-ban players
-F6	Terminate the script
+| Hotkey | Action |
+|------|------|
+| F3   |  Scan and auto-ban players  |
+| F6   |  Terminate the script       |
 
 ## How It Works
 The script uses OCR (via Tesseract) to read player names from the lobby.
