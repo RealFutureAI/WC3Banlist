@@ -14,7 +14,7 @@ pytesseract.pytesseract.tesseract_cmd = 'C:\\Program Files\\Tesseract-OCR\\tesse
 # Path to the Excel file with the ban list - Set your Path to your Excel Banlist here
 banlist_path = r'C:\Users\Alpha-Omega\Desktop\Cloudspeicher\Privat\Zocken\Banlist\banlist.xlsx'
 
-# Funktion zum Laden der Banliste aus der Excel-Datei
+# Load Banlist from Excel file
 def load_banlist():
     if not os.path.exists(banlist_path):
         print("Ban list file not found.")
@@ -115,13 +115,13 @@ def handle_f3():
 
 
 # Add Hotkeys
-keyboard.add_hotkey("F3", handle_f3)  # F3 startet die Aktion
-keyboard.add_hotkey("F6", handle_exit)  # F6 beendet das Programm
+keyboard.add_hotkey("F3", handle_f3)
+keyboard.add_hotkey("F6", handle_exit)
 
 # Variable to check if the program is running
 running = True
 
-print("Das Programm läuft im Hintergrund. Drücke F3 für die Aktion oder F6 zum Beenden.")
+print("The Program runs in background. Press F3 to check banned or F6 stop the program.")
 
 # check if hotkeys are pressed
 while running:
